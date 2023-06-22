@@ -1,11 +1,6 @@
-const puppeteer = require("puppeteer");
 const express = require("express");
-// const cors = require("cors");
 const app = express()
 const PORT = process.env.PORT || 3000;
-
-// let urlEncoded = bodyParser.urlencoded({extended: true});
-// app.use(cors());
 
 let chrome = {};
 let puppeteer;
