@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/checker", (req, res) => {
-  let options = {};
+let options = {};
 
 (async () => {
     if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
@@ -25,7 +25,7 @@ app.get("/checker", (req, res) => {
         args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
         defaultViewport: chrome.defaultViewport,
         executablePath: await chrome.executablePath,
-        headless: true,
+        headless: false,
         ignoreHTTPSErrors: true,
         };
     }
@@ -43,10 +43,12 @@ app.get("/checker", (req, res) => {
     res.send(JSON.stringify({msg: 'Success'}))
     })
     await page.close();
-    } catch (error) {
+    } 
+    catch (error) {
         console.error(error);
         return null;
     }
+
 })();
 })
 
