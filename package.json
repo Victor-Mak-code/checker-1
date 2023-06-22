@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "^18"
+    "node": "^14"
   },
   "devDependencies": {
     "puppeteer": "^16.2.0"
