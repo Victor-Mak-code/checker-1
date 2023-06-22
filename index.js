@@ -1,9 +1,8 @@
 const express = require("express");
-const app = express()
-const PORT = process.env.PORT || 3000;
-
 let chrome = {};
 let puppeteer;
+const app = express()
+const PORT = process.env.PORT || 3000;
 
 if(process.env.AWS_LAMBDA_FUNCTION_VERSION){
     chrome = require("chrome-aws-lambda");
@@ -18,7 +17,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/checker", async(req, res) => {
-//  const {email, pass} = req.query;
   let options = {};
 
 if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
