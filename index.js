@@ -1,7 +1,7 @@
 const express = require("express");
 let chrome = {};
 let puppeteer;
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 if(process.env.AWS_LAMBDA_FUNCTION_VERSION){
