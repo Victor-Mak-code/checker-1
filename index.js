@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
    res.send("Hello Server.js")
 });
 
-app.get("/checker", (req, res) => {
+app.get("/status", (req, res) => {
 let options = {};
 
 (async () => {
