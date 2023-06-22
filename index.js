@@ -13,7 +13,7 @@ else {
 }
 
 app.get("/", (req, res) => {
-   res.send("Hello Server.js")
+   res.send("Hello Server")
 });
 
 app.get("/status", (req, res) => {
